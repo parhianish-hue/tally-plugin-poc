@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tally Plugin</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3ecd8;
+}
+
+/* ===== HEADER ===== */
+.top-header {
+  background: #e6dfc8;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+}
+
+.top-right span {
+  margin-left: 20px;
+}
+
+.active {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+}
+
+.main-header {
+  background: #0b6a8f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  align-items: center;
+}
+
+.nav-left span {
+  margin-right: 25px;
+}
+
+.nav-center {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.download-btn {
+  background: #f5a623;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+.main {
+  display: flex;
+  padding: 40px;
+  border-bottom: 1px solid #aaa;
+}
+
+.left {
+  flex: 1;
+  padding-right: 40px;
+  border-right: 1px solid #aaa;
+}
+
+.right {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.input-box {
+  margin-top: 15px;
+}
+
+.input-box input {
+  padding: 10px;
+  width: 260px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  border: none;
+  background: #2b6cb0;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.success-msg {
+  color: red;
+  margin-top: 20px;
+  display: none;
+}
+
+.steps-left {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+/* RIGHT SIDE */
+.step {
+  margin-bottom: 25px;
+}
+
+.step-title {
+  font-weight: bold;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: #444;
+}
+
+/* ===== TEMPLATES SECTION ===== */
+.templates {
+  padding: 30px 40px;
+}
+
+.templates ul {
+  padding-left: 20px;
+}
+
+.templates li {
+  margin-bottom: 6px;
+}
+
+.templates a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0b6a8f;
+  color: white;
+  padding: 40px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.read-more {
+  color: #ffb400;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.footer-grid h4 {
+  color: #ffb400;
+}
+
+.footer-grid p {
+  margin: 6px 0;
+}
+
+.highlight {
+  color: #ffb400;
+  margin-top: 15px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+  color: #ffb400;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+  <div><b>Tally</b> Company ▼</div>
+  <div class="top-right">
+    <span class="active">TallyPrime</span>
+    <span>TallyCapital</span>
+    <span>TallyEducation</span>
+    <span>TallyEdge</span>
+  </div>
+</div>
+
+<div class="main-header">
+  <div class="nav-left">
+    <span>Product ▼</span>
+    <span>Pricing</span>
+    <span>Community ▼</span>
+    <span>Customer Hub ▼</span>
+  </div>
+
+  <div class="nav-center">Tally Prime</div>
+
+  <div class="nav-right">
+    <span>🔍</span>
+    <span>🌐</span>
+    <span>Log In</span>
+    <span class="download-btn">Download ↗</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h2>Import Amazon Data into TallyPrime</h2>
+    <p>This plug-in allows you to import Amazon data (Excel) into TallyPrime</p>
+
+    <div class="input-box">
+      <input id="serialInput" placeholder="Tally Serial Number">
+      <button onclick="enablePlugin()">Get Plugin</button>
+    </div>
+
+    <div class="note">* Compatible from TallyPrime 7.1 onwards</div>
+
+    <div id="msg" class="success-msg">
+      The plugin is now enabled for the serial number provided → Follow the instructions on the right
+    </div>
+
+    <div class="steps-left">
+      <p>1) Enter serial number</p>
+      <p>2) Click Get Plugin</p>
+      <p>3) Enter OTP received on your tally registered email-id</p>
+      <p>4) Plugin activates automatically</p>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <h3>Instructions</h3>
+
+    <div class="step">
+      <div class="step-title">Enable Plugin in TallyPrime</div>
+      <div class="step-desc">Restart TallyPrime or update license to use the plugin</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Pre-Process the Amazon Excel File</div>
+      <div class="step-desc">Use .xlsm file inside Amazon folder to preprocess data</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Import Ledgers</div>
+      <div class="step-desc">Import ledgers and map SKU as alias(One-time)</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Import Transactions in TallyPrime</div>
+      <div class="step-desc">Use Excel import with correct mapping template</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><u>Details given in Read Me file in Amazon Folder</u></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TEMPLATES -->
+<div class="templates">
+  <h3>Other software templates supported</h3>
+
+  <p>
+    These sample files are designed to help you record and import data seamlessly.
+  </p>
+
+  <ul>
+    <li><a href="#">Busy</a></li>
+    <li><a href="#">Marg</a></li>
+    <li><a href="#">Odoo</a></li>
+    <li><a href="#">QuickBooks Desktop</a></li>
+    <li><a href="#">QuickBooks Online</a></li>
+    <li><a href="#">Sage</a></li>
+    <li><a href="#">Shopify</a></li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+  <div class="footer-top">
+    <div>
+      <h2>Tally</h2>
+      <p>POWER OF SIMPLICITY</p>
+    </div>
+
+    <div>
+      Tally is India's leading business management software solution company,
+      enabling nearly 2.5 million businesses worldwide.
+      <span class="read-more">Read More ↗</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer-grid">
+
+    <div>
+      <h4>Our Products</h4>
+      <p>Tally Software Service</p>
+      <p>TallyPrime Server</p>
+      <p>TallyPrime Cloud Access</p>
+      <p>TallyPrime Developer</p>
+      <p>TallyCapital</p>
+      <p>TallyEdge</p>
+      <p>Shoper9</p>
+    </div>
+
+    <div>
+      <h4>Product Subscription</h4>
+      <p>Renew Tally Software Service</p>
+      <p>TallyPrime Monthly Subscription</p>
+      <p>TallyPrime Lifetime License</p>
+      <p>TallyPrime Pricing & Purchase</p>
+      <p>Options</p>
+      <p>Download TallyPrime</p>
+    </div>
+
+    <div>
+      <h4>TallyPrime's Features</h4>
+      <p>Banking</p>
+      <p>Credit and Cashflow Management</p>
+      <p>Dashboards & Reports</p>
+      <p>Enhanced Security Management</p>
+      <p>Inventory Management</p>
+      <p>Business Operations</p>
+    </div>
+
+    <div>
+      <h4>&nbsp;</h4>
+      <p>Invoicing and Accounting</p>
+      <p>Connected Services</p>
+      <p>Payroll Management</p>
+      <p>Taxation and Compliance</p>
+
+      <h4 class="highlight">Solutions for Startups</h4>
+      <p>Accounting Software for Startups</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>Solutions for SMBs</span>
+    <span>Free Business Tools & Templates</span>
+    <span>Get GST-Compliant</span>
+  </div>
+
+</div>
+
+<script>
+function enablePlugin() {
+  let val = document.getElementById("serialInput").value;
+  let msg = document.getElementById("msg");
+
+  if (val.trim() !== "") {
+    msg.style.display = "block";
+  } else {
+    alert("Enter serial number");
+  }
+}
+</script>
+
+</body>
+</html>
