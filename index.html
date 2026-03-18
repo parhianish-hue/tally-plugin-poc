@@ -19,12 +19,12 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   border-bottom: 3px solid #0b6a8f;
 }
 
-.logo-row { display: flex; align-items: center; gap: 10px; }
+.logo-row { display: flex; align-items: center; gap: 12px; }
 
+/* ✅ LOGO IMAGE */
 .logo-main {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  font-weight: 700;
+  height: 42px;
+  width: auto;
 }
 
 .company-text { font-size: 16px; }
@@ -45,7 +45,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 .nav-right { display: flex; align-items: center; gap: 15px; }
 
 .instructions-title {
-  font-size: 24px; /* MATCHED with left heading */
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -117,10 +117,9 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   gap: 40px;
 }
 
-.footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 700;
+/* ✅ FOOTER LOGO */
+.footer-logo img {
+  height: 36px;
 }
 
 .footer-tagline {
@@ -173,9 +172,10 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 
 <body>
 
+<!-- TOP HEADER -->
 <div class="top-header">
   <div class="logo-row">
-    <div class="logo-main">Tally</div>
+    <img src="C:\Users\anish.parhi\Downloads\plugin bundle\tally logo.png" class="logo-main" alt="Logo">
     <div class="company-text">Company ▼</div>
   </div>
 
@@ -187,6 +187,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   </div>
 </div>
 
+<!-- MAIN HEADER -->
 <div class="main-header">
   <div class="nav-left">
     <span>Product ▼</span>
@@ -203,6 +204,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   </div>
 </div>
 
+<!-- MAIN CONTENT -->
 <div class="main">
 
   <div class="left">
@@ -224,8 +226,8 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
       <p>1) Enter serial number</p>
       <p>2) Click Get Plugin</p>
       <p>3) Enter OTP</p>
-      <p>4) Plugin activates automatically</p>
-      <p>5) Enable plugin in TallyPrime by restarting Tally or updating license</p>
+      <p>4) Plugin is enabled successfully</p>
+      <p>5) Activate plugin in TallyPrime by restarting or by updating license</p>
     </div>
   </div>
 
@@ -233,24 +235,24 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
     <div class="instructions-title">Instructions to import Amazon data</div>
 
     <div class="step">
-      <div class="step-title">Pre-Process the Amazon Excel File</div>
+      <div class="step-title">1. Pre-Process the Amazon Excel File</div>
       <div class="step-desc">Use Amazon data processing tool from Amazon folder in Tally installation path to pre-process the data</div>
     </div>
 
     <div class="step">
-      <div class="step-title">Import Pre-requisite ledgers</div>
+      <div class="step-title">Optional: Import Pre-requisite ledgers (One time)</div>
       <div class="step-desc">Import required ledgers if not available</div>
     </div>
 
     <div class="step">
-      <div class="step-title">Import Transactions in TallyPrime</div>
-      <div class="step-desc">Use Excel import with required mapping template</div>
+      <div class="step-title">2. Import Transactions in TallyPrime</div>
+      <div class="step-desc">Import transactions with required mapping template</div>
     </div>
-
   </div>
 
 </div>
 
+<!-- TEMPLATES -->
 <div class="templates">
   <h3>Other software templates supported</h3>
   <p>These sample files help you import data from other softwares into Tally using Excel Import capability.</p>
@@ -265,11 +267,14 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   </ul>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
   <div class="footer-top">
     <div>
-      <div class="footer-logo">Tally</div>
-      <div class="footer-tagline">POWER OF SIMPLICITY</div>
+      <div class="footer-logo">
+        <img src="C:\Users\anish.parhi\Downloads\plugin bundle\tally blue logo.png" alt="Logo">
+      </div>
+      <div class="footer-tagline"></div>
     </div>
 
     <div class="footer-desc">
