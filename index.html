@@ -42,10 +42,10 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 }
 
 .nav-left span { margin-right: 25px; }
-.nav.right { flex: 1; padding-left: 40px; }
+.nav-right { display: flex; align-items: center; gap: 15px; }
 
 .instructions-title {
-  font-size: 28px;
+  font-size: 24px; /* MATCHED with left heading */
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -61,13 +61,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   font-size: 16px;
   color: #555;
   margin-top: 4px;
-}
-
-.step-link {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: underline;
 }
 
 .download-btn {
@@ -102,12 +95,8 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 }
 
 .note { font-size: 12px; margin-top: 5px; }
-.success-msg { color: red; margin-top: 20px; display: none; }
-.steps-left { margin-top: 20px; font-size: 13px; }
-
-.step { margin-bottom: 25px; }
-.step-title { font-weight: 600; }
-.step-desc { font-size: 13px; color: #444; }
+.success-msg { color: red; margin-top: 20px; display: none; line-height: 1.5; }
+.steps-left { margin-top: 20px; font-size: 13px; line-height: 1.6; }
 
 /* TEMPLATES */
 .templates { padding: 40px; }
@@ -115,7 +104,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 .templates li { margin-bottom: 8px; }
 .templates a { color: #0077cc; text-decoration: none; }
 
-/* FOOTER (MATCHED TO SCREENSHOT) */
+/* FOOTER */
 .footer {
   background: #1c6f8a;
   color: white;
@@ -184,7 +173,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
 
 <body>
 
-<!-- HEADER -->
 <div class="top-header">
   <div class="logo-row">
     <div class="logo-main">Tally</div>
@@ -215,7 +203,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   </div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
   <div class="left">
@@ -230,7 +217,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
     <div class="note">* Compatible from TallyPrime 7.1 onwards</div>
 
     <div id="msg" class="success-msg">
-      The plugin is now enabled → Follow instructions on the right
+      The plugin is now enabled -> Follow instructions provided on the right hand side to import Amazon data.
     </div>
 
     <div class="steps-left">
@@ -238,48 +225,35 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
       <p>2) Click Get Plugin</p>
       <p>3) Enter OTP</p>
       <p>4) Plugin activates automatically</p>
+      <p>5) Enable plugin in TallyPrime by restarting Tally or updating license</p>
     </div>
   </div>
 
   <div class="right">
-    <div class="instructions-title">Instructions</div>
-
-    <div class="step">
-      <div class="step-title">Enable Plugin in TallyPrime</div>
-      <div class="step-desc">Restart TallyPrime or update license to use the plugin</div>
-    </div>
+    <div class="instructions-title">Instructions to import Amazon data</div>
 
     <div class="step">
       <div class="step-title">Pre-Process the Amazon Excel File</div>
-      <div class="step-desc">Use .xlsm file inside Amazon folder to preprocess data</div>
+      <div class="step-desc">Use Amazon data processing tool from Amazon folder in Tally installation path to pre-process the data</div>
     </div>
 
     <div class="step">
-      <div class="step-title">Import Ledgers</div>
-      <div class="step-desc">Import ledgers and map SKU as alias(One-time)</div>
+      <div class="step-title">Import Pre-requisite ledgers</div>
+      <div class="step-desc">Import required ledgers if not available</div>
     </div>
 
     <div class="step">
       <div class="step-title">Import Transactions in TallyPrime</div>
-      <div class="step-desc">Use Excel import with correct mapping template</div>
+      <div class="step-desc">Use Excel import with required mapping template</div>
     </div>
 
-    <div class="step-link">Details given in Read Me file in Amazon Folder</div>
   </div>
 
 </div>
 
-    <div class="step">
-      <div class="step-title"></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- TEMPLATES -->
 <div class="templates">
   <h3>Other software templates supported</h3>
-  <p>These sample files help you import data from other softwares into Tally using Excel Impport capability.</p>
+  <p>These sample files help you import data from other softwares into Tally using Excel Import capability.</p>
   <ul>
     <li><a href="#">Busy</a></li>
     <li><a href="#">Marg</a></li>
@@ -291,9 +265,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   </ul>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-
   <div class="footer-top">
     <div>
       <div class="footer-logo">Tally</div>
@@ -309,7 +281,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   <hr>
 
   <div class="footer-grid">
-
     <div>
       <h4>Our Products</h4>
       <p>Tally Software Service</p>
@@ -349,7 +320,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
       <p style="color:#ffb400;font-weight:600;">Solutions for Startups</p>
       <p>Accounting Software for Startups</p>
     </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -357,7 +327,6 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
     <span>Free Business Tools & Templates</span>
     <span>Get GST-Compliant</span>
   </div>
-
 </div>
 
 <script>
