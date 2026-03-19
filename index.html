@@ -63,6 +63,15 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
   margin-top: 4px;
 }
 
+/* ✅ OPTIONAL STEP SMALLER FONT */
+.step-optional .step-title {
+  font-size: 16px;
+}
+
+.step-optional .step-desc {
+  font-size: 13px;
+}
+
 .download-btn {
   background: #f5a623;
   padding: 8px 16px;
@@ -239,7 +248,8 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: #f3ecd8; }
       <div class="step-desc">Use Amazon data processing tool from Amazon folder in Tally installation path to pre-process the data</div>
     </div>
 
-    <div class="step">
+    <!-- ✅ UPDATED OPTIONAL STEP -->
+    <div class="step step-optional">
       <div class="step-title">Optional: Import Pre-requisite ledgers (One time)</div>
       <div class="step-desc">Import required ledgers if not available</div>
     </div>
